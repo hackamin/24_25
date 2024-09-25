@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title> ฅ^•ﻌ•^ฅ </title>
+</head>
+<body>
+  <div class="click">
+    <h3> click the minmin </h3>
+  </div>
+  <div class="flip-card-container">
+    <div class="flip-card">
+      <div class="flip-card-front">
+        <video id="vidPlay" loop>
+          <source src="happylia.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="flip-card-back">
+        <p>
+          <em>I love how your energy radiates and how the atmosphere brightens with every smile and little dance you do.
+            <br><br>You'll forever be my little ray of sunshine.
+          </em>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var flipCardContainer = document.querySelector('.flip-card-container');
+        var vidPlay = document.getElementById('vidPlay');
+
+        flipCardContainer.addEventListener('click', function() {
+            this.querySelector('.flip-card').classList.toggle('flipped');
+        });
+
+        flipCardContainer.addEventListener('click', function() {
+            if (vidPlay.paused) {
+                vidPlay.play();
+            }
+        });
+    });
+  </script>
+</body>
+</html>
